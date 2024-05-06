@@ -1,17 +1,22 @@
 <!-- El component.HTML se encarga del render -->
 <h1>Fundamentos de angular</h1>
+<hr />
 
+<h1>Propiedades Binding</h1>
 
-<!-- string interpolation:
-- La interpolacion es la tecnica que permite mostrar dinamicamente los
-valores de variables de un componente en el HTML.
-- Se hace por medio de {{ }}.
-Como la logica de nuestro typeScript pasa los datos a renderizar a
-nuestro HTML.
-Esto conecta al componente con el html, es decir esta es la vista asociada
-a ese componente.ts-->
+<!-- disabled es una propiedad nativa de html -->
+<!-- Property binding [disabled]-->
+<button [disabled]="btndisabled">Enviar</button>
+<!-- Property binding del objeto person [value], [src].   -->
+<input type="text" [value]="person.name" />
+<progress max="100" [value]="person.age"></progress>
+<img width="100" [src]="person.avatar" />
 
-<h2>{{ 'Hola Mundo'.repeat(5) }}</h2>
+<hr />
+<h1>String Interpolation</h1>
+<h2>{{ "Hola Mundo".repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
-<h3>Hola, soy {{ name }} y tengo {{ age }}</h3> <!-- string interpolation -->
-<img src={{img}} alt="image"> <!-- string interpolation de img -->
+<!-- string interpolation -->
+<h3>Hola, soy {{ name }} y tengo {{ age }}</h3>
+<!-- string interpolation de img -->
+<img src="{{ img }}" alt="image" />
