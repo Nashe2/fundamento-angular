@@ -15,11 +15,21 @@ export class PruebaComponent {
   age = 18;
   img = 'https://www.w3schools.com/howto/img_avatar.png';
 
-  btndisabled = false;
+  btnDisabled = false;
 
+  /* Objeto */
   person = {
     name: 'Nashe',
-    age: 18,
+    age: 20,
     avatar: 'https://www.w3schools.com/howto/img_avatar.png',
   };
+
+  /*Metodos de event */
+  toogleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  increseAge(){
+    this.person.age += 1;
+  }
 }
