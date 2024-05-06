@@ -1,1 +1,17 @@
-<p>prueba works!</p>
+<!-- El component.HTML se encarga del render -->
+<h1>Fundamentos de angular</h1>
+
+
+<!-- string interpolation:
+- La interpolacion es la tecnica que permite mostrar dinamicamente los
+valores de variables de un componente en el HTML.
+- Se hace por medio de {{ }}.
+Como la logica de nuestro typeScript pasa los datos a renderizar a
+nuestro HTML.
+Esto conecta al componente con el html, es decir esta es la vista asociada
+a ese componente.ts-->
+
+<h2>{{ 'Hola Mundo'.repeat(5) }}</h2>
+<p>3 + 3 = {{ 3 + 3 }}</p>
+<h3>Hola, soy {{ name }} y tengo {{ age }}</h3> <!-- string interpolation -->
+<img src={{img}} alt="image"> <!-- string interpolation de img -->

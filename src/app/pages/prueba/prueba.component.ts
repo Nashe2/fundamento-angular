@@ -4,9 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-prueba',
   standalone: true,
   imports: [],
-  templateUrl: './prueba.component.html',
+  templateUrl: './prueba.component.html',/* Esto conecta al componente con el html, es decir esa es la vista asociada a este componente*/
   styleUrl: './prueba.component.scss'
 })
-export class PruebaComponent {
 
+/* Aquí se pone la lógica del negocio */
+export class PruebaComponent {
+name = 'Nashe';
+age = 18;
+img = 'https://www.w3schools.com/howto/img_avatar.png';
 }
