@@ -10,6 +10,25 @@
 <p>Edad {{ person.age }} </p>
 <button (click)="increseAge()">Age ++</button>
 
+<!-- Event binding son eventos nativos del html o del DOM y llevan $ -->
+<div class="box" (scroll)="onScroll($event)">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptatibus minima. Deserunt cum ex aliquid quaerat doloremque totam autem excepturi dolorem? Reprehenderit eius illo sequi consequuntur quaerat eaque ratione similique. </p>
+</div>
+
+<!-- Además del evento clic, seguramente el más utilizado, hay otros eventos
+como el change para detectar cambios en un campo de formulario, el evento scroll
+para detectar el desplazamiento horizontal/vertical del usuario en el navegador,
+onKeyUp o onKeyDown para detectar cuando el usuario aprieta o deja de apretar
+un botón de su teclado.
+La importancia del Event Binding en Angular está dada por la posibilidad de
+comunicar el componente y la vista, el código TS con el código HTML,
+intercambiando datos entre ellos.
+Puedes enviarle al controlador el evento completo que se produce en la vista.
+Para esto, solo declara un parámetro $event en el método que se encuentra
+escuchando el evento. -->
+
+<p>Nombre {{ person.name }} </p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)">
 
 <hr/>
 <h1>Propiedades Binding</h1>
@@ -30,3 +49,6 @@
 <h3>Hola, soy {{ name }} y tengo {{ age }}</h3>
 <!-- string interpolation de img -->
 <img src="{{ img }}" alt="image" />
+
+<!-- El enlace de datos funciona con propiedades de elementos,
+componentes y directivas DOM, no con atributos HTML. -->
