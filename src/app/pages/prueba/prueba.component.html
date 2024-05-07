@@ -7,6 +7,8 @@
 <!-- Es una propiedad entre en property binding y el event bigdign:
 [()] hace toda la logica de enviar y configurar el valor hacia el value del input y de tener actualizado todo lo que escribamos ah -->
 <input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" />
+<!--  Agregue una variable en el input para que valide booleaneamente
+si tiene un valor y que es requerido, esto lo hice en un string interpolation. -->
 <p>Valid: {{ nameInput.valid }}</p>
 
 <h1>Eventos</h1>
