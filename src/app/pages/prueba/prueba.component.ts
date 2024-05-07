@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-prueba',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl:
     './prueba.component.html' /* Esto conecta al componente con el html, es decir esa es la vista asociada a este componente*/,
   styleUrl: './prueba.component.scss',
@@ -25,22 +26,21 @@ export class PruebaComponent {
   };
 
   /*Metodos de event */
-  toogleButton(){
+  toogleButton() {
     this.btnDisabled = !this.btnDisabled;
   }
 
-  increseAge(){
+  increseAge() {
     this.person.age += 1;
   }
 
-  onScroll(event: Event){
+  onScroll(event: Event) {
     const element = event.target as HTMLElement;
     console.log(element.scrollTop);
   }
 
-  changeName(event: Event){
+  changeName(event: Event) {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
   }
-
 }

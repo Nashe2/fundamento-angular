@@ -2,17 +2,29 @@
 <h1>Fundamentos de angular</h1>
 <hr />
 
+<h1>ngModel</h1>
+<p>Nombre {{ person.name }}</p>
+<!-- Es una propiedad entre en property binding y el event bigdign:
+[()] hace toda la logica de enviar y configurar el valor hacia el value del input y de tener actualizado todo lo que escribamos ah -->
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" />
+<p>Valid: {{ nameInput.valid }}</p>
+
 <h1>Eventos</h1>
 <!-- Event Binding. El event es click su funcion toogleButton modifica la propiedad html disabled -->
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toogleButton()">Toggle Button</button>
 
-<p>Edad {{ person.age }} </p>
+<p>Edad {{ person.age }}</p>
 <button (click)="increseAge()">Age ++</button>
 
 <!-- Event binding son eventos nativos del html o del DOM y llevan $ -->
 <div class="box" (scroll)="onScroll($event)">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptatibus minima. Deserunt cum ex aliquid quaerat doloremque totam autem excepturi dolorem? Reprehenderit eius illo sequi consequuntur quaerat eaque ratione similique. </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
+    voluptatibus minima. Deserunt cum ex aliquid quaerat doloremque totam autem
+    excepturi dolorem? Reprehenderit eius illo sequi consequuntur quaerat eaque
+    ratione similique.
+  </p>
 </div>
 
 <!-- Además del evento clic, seguramente el más utilizado, hay otros eventos
@@ -27,10 +39,10 @@ Puedes enviarle al controlador el evento completo que se produce en la vista.
 Para esto, solo declara un parámetro $event en el método que se encuentra
 escuchando el evento. -->
 
-<p>Nombre {{ person.name }} </p>
-<input type="text" [value]="person.name" (keyup)="changeName($event)">
+<p>Nombre {{ person.name }}</p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)" />
 
-<hr/>
+<hr />
 <h1>Propiedades Binding</h1>
 
 <!-- disabled es una propiedad nativa de html -->
