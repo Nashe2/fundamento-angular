@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormControl } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-prueba',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl:
     './prueba.component.html' /* Esto conecta al componente con el html, es decir esa es la vista asociada a este componente*/,
   styleUrl: './prueba.component.scss',
@@ -25,6 +26,9 @@ export class PruebaComponent {
     avatar: 'https://www.w3schools.com/howto/img_avatar.png',
   };
 
+  names: string[] = ['Enrique', 'María', 'Paola'];
+  newName = '';
+
   /*Metodos de event */
   toogleButton() {
     this.btnDisabled = !this.btnDisabled;
@@ -42,5 +46,15 @@ export class PruebaComponent {
   changeName(event: Event) {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+
+  /* en este metodo para evento, solo le decimos con this
+  que al array queremos agregarle un objeto con el metodo
+  de array push a traves de la nueva variable --> this.newName
+  */
+  addName(){
+    this.names.push(this.newName);
+    /* decirle que después de agregar quede en vacio el input */
+    this.newName = '';
   }
 }

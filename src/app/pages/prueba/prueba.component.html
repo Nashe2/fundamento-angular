@@ -2,6 +2,17 @@
 <h1>Fundamentos de angular</h1>
 <hr />
 
+<input type="text" required [(ngModel)]="newName" />
+<button (click)="addName()">Agregar nombre</button>
+
+<h1>*ngFor</h1>
+<ul><!-- variable temp of  nombre del array -->
+  <li *ngFor="let name of names; index as i">
+    {{i}} {{ name }}
+  </li>
+</ul>
+
+<hr/>
 <h1>ngModel</h1>
 <p>Nombre {{ person.name }}</p>
 <!-- Es una propiedad entre en property binding y el event bigdign:
