@@ -57,4 +57,9 @@ export class PruebaComponent {
     /* decirle que después de agregar quede en vacio el input */
     this.newName = '';
   }
+
+  deleteName(index: number){
+    this.names.splice(index, 1);
+  }
+
 }

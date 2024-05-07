@@ -7,8 +7,10 @@
 
 <h1>*ngFor</h1>
 <ul><!-- variable temp of  nombre del array -->
+  <li *ngIf="names.length === 0">No hay nombres</li>
   <li *ngFor="let name of names; index as i">
     {{i}} {{ name }}
+    <button (click)="deleteName(i)">Eliminar</button>
   </li>
 </ul>
 
