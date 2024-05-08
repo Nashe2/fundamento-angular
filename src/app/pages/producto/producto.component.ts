@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, model } from '@angular/core';
 import { FormsModule, FormControl } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Producto } from '../../models/producto.model';
 
 @Component({
   selector: 'app-producto',
@@ -10,14 +11,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './producto.component.scss',
 })
 export class ProductoComponent {
-  /*  */
+  /*
   producto = {
   name: 'mouse',
   price: '359' ,
   image: './assets/images/toy.jpg',
 }
+*/
 
-  productos = [
+  productos: Producto[] = [
     {
       name: 'EL mejor juguete',
       price: 565,
