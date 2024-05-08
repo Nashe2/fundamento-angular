@@ -16,4 +16,7 @@ export class FormularioComponent {
     password: '',
   }
 
+  onRegister(){
+    console.log(this.register);
+  }
 }

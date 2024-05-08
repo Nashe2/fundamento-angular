@@ -1,7 +1,7 @@
 <h1>Formulario</h1>
 
-<form>
-  <h1> Iniciar Sesion</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <h1> Registro </h1>
   <div class="input-group">
     <label for="name"> Nombre </label>
     <input type="text" name="name" required id="name" [(ngModel)]="register.name" />
@@ -17,4 +17,6 @@
     <input type="text" name="password" required id="password" [(ngModel)]="register.password">
     <p>Mensaje de error</p>
   </div>
+  <button type="submit" [disabled]="myForm.invalid" >Registrar</button>
+  <button type="button">Acción</button>
 </form>
