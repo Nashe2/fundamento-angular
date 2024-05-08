@@ -3,6 +3,7 @@ import { PruebaComponent } from './pages/prueba/prueba.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AbarroteComponent } from './pages/abarrote/abarrote.component';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'producto',
     component: ProductoComponent,
-  }
+  },
+  {
+    path: 'formulario',
+    component: FormularioComponent,
+  },
 ];
 
