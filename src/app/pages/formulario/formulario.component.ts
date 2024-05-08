@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, MatSlideToggleModule,],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.scss'
 })
