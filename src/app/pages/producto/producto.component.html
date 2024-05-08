@@ -1,1 +1,8 @@
-<p>producto works!</p>
+<h1>Productos</h1>
+
+<h2>*ngFor Objs</h2>
+<div *ngFor="let producto of productos">
+  <img width="250" [src]="producto.image" alt="image" />
+  <h1>{{ producto.price }}</h1>
+  <p>{{ producto.name }}</p>
+</div>
