@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AbarroteComponent } from './pages/abarrote/abarrote.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { SesionComponent } from './pages/sesion/sesion.component';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,10 @@ export const routes: Routes = [
   {
     path: 'formulario',
     component: FormularioComponent,
+  },
+  {
+    path: 'sesion',
+    component: SesionComponent,
   },
 ];
 

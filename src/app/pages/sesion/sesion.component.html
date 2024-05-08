@@ -1,0 +1,26 @@
+<h1>Iniciar Sesion</h1>
+
+<form>
+  <div class="input-group">
+    <label for="email">Email</label>
+    <input
+      type="text"
+      name="email"
+      required
+      id="email"
+      [(ngModel)]="sesion.email"
+    />
+    <p>Ingresa nuevamente tu correo</p>
+  </div>
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input
+      type="text"
+      name="password"
+      required
+      id="password"
+      [(ngModel)]="sesion.password"
+    />
+    <p>Ingresa nuevamente tu contraseña</p>
+  </div>
+</form>
